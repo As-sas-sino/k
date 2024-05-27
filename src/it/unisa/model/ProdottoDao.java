@@ -152,10 +152,12 @@ public class ProdottoDao implements ProdottoDaoInterfaccia{
 		ArrayList<ProdottoBean> products = new ArrayList<ProdottoBean>();
 
 		String selectSQL = "SELECT * FROM " + ProdottoDao.TABLE_NAME;
-
-		if (order != null && !order.equals("")) {
-			selectSQL += " ORDER BY " + order;
-		}
+				if (order != null && !order.equals("")) {
+					selectSQL += " ORDER BY " + order;
+				}
+			
+		
+		
 
 		try {
 			connection = ds.getConnection();
